@@ -50,6 +50,13 @@ Show push result and current status:
 
 ## Flow Summary
 
-1. Stage changes → 2. (Optional) Code review → 3. Commit → 4. Push to origin
+1. Stage changes → 2. (Optional) Code review → 3. Generate commit message → 4. Confirm message → 5. Commit → 6. Push to origin
 
-The command ensures your local changes are committed with a quality message and immediately synchronized with the remote repository.
+The command ensures your local changes are committed with a quality message (that you've confirmed) and immediately synchronized with the remote repository.
+
+## Note
+
+This command inherits all functionality from `/project:gc`, including:
+- Commit message generation and confirmation
+- Optional code review with `--review` flag
+- Professional commit message formatting
