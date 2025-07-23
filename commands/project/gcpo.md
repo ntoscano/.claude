@@ -5,7 +5,7 @@ description: Git commit and push to origin - extends gc with automatic push
 
 # Git Commit and Push to Origin (gcpo)
 
-**Purpose:** Stage all changes, create a commit with a concise but thorough message, then push to origin.
+**Purpose:** Commit staged changes with a concise but thorough message, then push to origin.
 
 ## Options
 
@@ -50,7 +50,7 @@ Show push result and current status:
 
 ## Flow Summary
 
-1. Stage changes → 2. (Optional) Code review → 3. Generate commit message → 4. Confirm message → 5. Commit → 6. Push to origin
+1. (Optional) Code review → 2. Generate commit message → 3. Confirm message → 4. Commit staged changes → 5. Push to origin
 
 The command ensures your local changes are committed with a quality message (that you've confirmed) and immediately synchronized with the remote repository.
 
