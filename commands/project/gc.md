@@ -73,7 +73,7 @@ For multi-file changes:
 
 - **ONLY execute this step if user confirmed in step 5**
 - Run `git add .`
-- Create commit with the confirmed message
+- Create commit with: `git commit -m 'message'` (using the confirmed message)
 - **CRITICAL: Do NOT add any signatures, emojis, or "Generated with" attributions**
 - **CRITICAL: Do NOT add "Co-Authored-By" or any other metadata**
 - **Use ONLY the exact message that was confirmed by the user**
