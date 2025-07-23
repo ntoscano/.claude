@@ -7,6 +7,8 @@ description: Git add all and commit with concise, thorough message (optional --r
 
 **Purpose:** Stage all changes and create a commit with a concise but thorough message.
 
+**⚠️ IMPORTANT: This command MUST ask for user confirmation before committing. Never auto-commit.**
+
 ## Options
 
 - `--review` or `-r`: Run code review on staged changes before committing
@@ -57,17 +59,25 @@ For multi-file changes:
 
 ### 5. Confirm Commit Message
 
-- Display the proposed commit message
-- **REQUIRED:** Ask user: "Proceed with this commit message? (y/n)"
-- If no, ask for user to provide their own message
-- If yes, continue to step 6
-- **NEVER proceed without explicit confirmation**
+**CRITICAL - STOP HERE FOR USER CONFIRMATION:**
+- Display the proposed commit message to the user
+- **MANDATORY:** Ask user: "Does this commit message look right to you? (Y/n)"
+- **WAIT for user response before proceeding**
+- Default is YES if user just presses Enter
+- If user responds "n" or "no": Ask user to provide their preferred commit message
+- If user responds "y", "yes", or just presses Enter: Continue to step 6
+- **DO NOT SKIP THIS STEP - DO NOT AUTO-COMMIT**
+- **The commit MUST NOT happen without explicit user confirmation**
 
-### 6. Stage and Commit
+### 6. Stage and Commit (ONLY AFTER CONFIRMATION)
 
+- **ONLY execute this step if user confirmed in step 5**
 - Run `git add .`
-- Create commit ONLY with confirmed message
-- Do NOT commit if user has not confirmed
+- Create commit with the confirmed message
+- **CRITICAL: Do NOT add any signatures, emojis, or "Generated with" attributions**
+- **CRITICAL: Do NOT add "Co-Authored-By" or any other metadata**
+- **Use ONLY the exact message that was confirmed by the user**
+- **If no confirmation was received, EXIT without committing**
 
 ## Message Format
 
@@ -138,8 +148,11 @@ fix: Resolve critical data synchronization issues
 ## Important Notes
 
 - NO emojis
-- NO signatures or attribution
+- NO signatures or attribution (no "Generated with", no "Co-Authored-By")
+- NO Claude Code signatures or any form of bot/AI attribution
 - NO verbose explanations in the commit message
 - Keep technical but accessible
 - Let the code tell the HOW, commit tells the WHAT
 - **CRITICAL: Never commit without user confirmation of the message**
+- **CRITICAL: The commit message must be EXACTLY what was shown to and confirmed by the user**
+- **CRITICAL: Do NOT add "Co-Authored-By" or any other metadata**
