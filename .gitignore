@@ -1,0 +1,62 @@
+# Claude session and project data (sensitive)
+projects/
+*.jsonl
+
+# IDE and lock files
+ide/
+*.lock
+
+# Shell snapshots (may contain sensitive environment data)
+shell-snapshots/
+
+# Todos (may contain private task information)
+todos/
+
+# Statsig analytics
+statsig/
+
+# Rules (may be project-specific)
+rules/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Backup files
+*.bak
+*.backup
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Node modules (if any)
+node_modules/
+
+# Environment files (may contain secrets)
+.env
+.env.*
+*.env
+
+# Personal notes or drafts
+*personal*
+*private*
+*secret*
+
+# Allow these files/directories to be shared:
+# - commands/ (custom commands)
+# - scripts/ (utility scripts)
+# These are explicitly NOT ignored and will be tracked by git
